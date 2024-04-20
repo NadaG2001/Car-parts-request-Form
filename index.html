@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طلب قطع غيار سياره</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body dir="rtl">
+    <form id="sparePartsRequestForm">
+        <h2>طلب قطع غيار سياره</h2>
+
+        <div class="step active" id="step1">
+            <h3>نوع المستخدم</h3>
+            <label for="userType">اختر نوع المستخدم:</label>
+            <input type="radio" id="individual" name="userType" value="individual">
+            <label for="individual">فردي</label><br>
+            <input type="radio" id="company" name="userType" value="company">
+            <label for="company">شركة</label>
+        </div>
+
+        <div class="step" id="step2" style="display: none;">
+            <h3>اختيار صانع السياره</h3>
+            <label for="carManufacturer">اختر صانع السياره من قائمة منسدلة:</label>
+            <select id="carManufacturer" name="carManufacturer">
+                <option value="" disabled selected>اختر صانع السيارة</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="BMW">BMW</option>
+                <!-- Add more manufacturers here as needed -->
+            </select>
+        </div>
+
+        <div class="step" id="step3" style="display: none;">
+            <h3>اختيار سنة صنع السيارة</h3>
+            <label for="carModelYear">اختر سنة صنع السيارة من قائمة منسدلة:</label>
+            <select id="carModelYear" name="carModelYear" disabled>
+                <option value="" disabled selected>اختر سنة صنع السيارة</option>
+            </select>
+        </div>
+
+        <div class="step" id="step4" style="display: none;">
+            <h3>اختيار طراز السيارة</h3>
+            <label for="carModel">اختر طراز السيارة من قائمة منسدلة:</label>
+            <select id="carModel" name="carModel" disabled>
+                <option value="" disabled selected>اختر طراز السيارة</option>
+            </select>
+        </div>
+
+        <div class="step" id="step5" style="display: none;">
+            <h3>صوره السياره</h3>
+            <img id="carImage" src="" alt="صوره السياره">
+        </div>
+
+        <button type="button" id="prevBtn" disabled>السابق</button>
+        <button type="button" id="nextBtn">التالي</button>
+        <button type="submit" id="submitBtn" style="display: none;">إرسال الطلب</button>
+    </form>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
